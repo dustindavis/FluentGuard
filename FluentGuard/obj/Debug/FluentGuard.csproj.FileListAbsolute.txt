@@ -1,0 +1,5 @@
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\bin\Debug\FluentGuard.pdb
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\obj\Debug\FluentGuard.pdb
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\bin\Debug\FluentGuard.dll.config
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\bin\Debug\FluentGuard.dll
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\obj\Debug\FluentGuard.dll

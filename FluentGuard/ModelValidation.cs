@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -47,6 +48,23 @@ namespace FluentGuard
         public ModelValidation<T> WhenNullOrEmpty(string Message, params Expression<Func<T, string>>[] property)
         {
             RunExpression(Message, (c) => String.IsNullOrEmpty(c(_model)), property);
+            return this;
+        }
+
+        public ModelValidation<T> WhenNullOrEmpty<W>(string Message, params Expression<Func<T, IEnumerable<W>>>[] property)
+        {
+            RunExpression(Message, (c) => c(_model) == null || c(_model).Count() == 0, property);
+            return this;
+        }
+
+        public ModelValidation<T> WhenNullOrEmpty(string Message, params Expression<Func<T, IEnumerable>>[] property)
+        {
+            Func<IEnumerable, bool> hasAtLeastOneItem = new Func<IEnumerable,bool>((x) => {
+                var res = x.GetEnumerator().MoveNext(); //TODO: Better way?
+                return res;
+            });
+
+            RunExpression(Message, (c) => c(_model) == null || !hasAtLeastOneItem(c(_model)), property);
             return this;
         }
 

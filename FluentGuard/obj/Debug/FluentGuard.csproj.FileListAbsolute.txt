@@ -3,3 +3,9 @@ c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentG
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\bin\Debug\FluentGuard.dll.config
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\bin\Debug\FluentGuard.dll
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\FluentGuard\obj\Debug\FluentGuard.dll
+C:\Projects\tmp\FluentGuard\bin\Debug\FluentGuard.dll.config
+C:\Projects\tmp\FluentGuard\bin\Debug\FluentGuard.dll
+C:\Projects\tmp\FluentGuard\bin\Debug\FluentGuard.pdb
+C:\Projects\tmp\FluentGuard\obj\Debug\FluentGuard.csprojResolveAssemblyReference.cache
+C:\Projects\tmp\FluentGuard\obj\Debug\FluentGuard.dll
+C:\Projects\tmp\FluentGuard\obj\Debug\FluentGuard.pdb

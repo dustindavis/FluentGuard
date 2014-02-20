@@ -9,3 +9,8 @@ c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\Console
 C:\Projects\tmp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
 C:\Projects\tmp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Projects\tmp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Projects\tmp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Projects\tmp\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Projects\tmp\ConsoleApplication1\bin\Debug\FluentGuard.dll
+C:\Projects\tmp\ConsoleApplication1\bin\Debug\FluentGuard.pdb
+C:\Projects\tmp\ConsoleApplication1\obj\Debug\Example.csprojResolveAssemblyReference.cache

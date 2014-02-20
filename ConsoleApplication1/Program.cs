@@ -15,7 +15,8 @@ namespace FluentGuard.Demo
             {
                 DoWork(new Person()
                 {
-                    Age = 19
+                    Age = 19,
+                    Comments = new string[0]
                 });
             }
             catch (ComponentModelValidationException ex)
@@ -36,7 +37,10 @@ namespace FluentGuard.Demo
                 .WhenNull("{0} is required", c => c.BirthDate)
                 .WhenTrue("Must be 21 or older", c => c < 21, c => c.Age)
                 .WhenFalse("Must be 21 or older", c => c >= 21, c => c.Age)
+                .WhenNullOrEmpty<int>("No lottory numbers given", c=> c.LottoNumbers)
+                .WhenNullOrEmpty("No comments provided", c=>c.Comments)
                 .ThrowIfErrors();
+
 
             Console.WriteLine("This person is cool");
         }
@@ -47,6 +51,8 @@ namespace FluentGuard.Demo
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
+        public List<int> LottoNumbers { get; set; }
+        public string[] Comments { get; set; }
         public DateTime? BirthDate { get; set; }
     }
 }

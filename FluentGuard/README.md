@@ -7,9 +7,9 @@ Fluent Guard is a validation framework with a fluent interface. It's meant to be
 	public void DoWork(Person person)
         {
             ModelValidation<Person>.Validate(person)
-                .WhenNullOrEmpty("{0} is required", c => c.FirstName, c => c.LastName)
-                .WhenNull("{0} is required", c=>c.BirthDate)
-                .WhenTrue("Must be 21 or older", c=> c < 21, c=>c.Age)
+                .NullOrEmpty("{0} is required", c => c.FirstName, c => c.LastName)
+                .Null("{0} is required", c=>c.BirthDate)
+                .IsTrue("Must be 21 or older", c=> c < 21, c=>c.Age)
                 .ThrowIfErrors();
 
             Console.WriteLine("This person is cool");

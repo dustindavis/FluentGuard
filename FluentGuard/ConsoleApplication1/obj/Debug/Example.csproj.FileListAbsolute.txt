@@ -1,0 +1,8 @@
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Example.csprojResolveAssemblyReference.cache
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\FluentGuard.dll
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\FluentGuard.pdb
+c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

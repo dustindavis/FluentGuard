@@ -37,9 +37,9 @@ namespace FluentGuard.Demo
                 .WhenNull("{0} is required", c => c.BirthDate)
                 .WhenTrue("Must be 21 or older", c => c < 21, c => c.Age)
                 .WhenFalse("Must be 21 or older", c => c >= 21, c => c.Age)
-                .WhenNullOrEmpty<int>("No lottory numbers given", c=> c.LottoNumbers)
-                .WhenNullOrEmpty("No comments provided", c=>c.Comments)
-                .ThrowIfErrors();
+                .WhenNullOrEmpty<int>("No lottory numbers given", c => c.LottoNumbers)
+                .WhenNullOrEmpty("No comments provided", c => c.Comments)
+                .ThrowWhenOneOrMoreConditionsAreMet();
 
 
             Console.WriteLine("This person is cool");

@@ -12,13 +12,14 @@ namespace FluentGuard
     public class ModelValidation<T>
     {
         List<ComponentModelValidationError> _errors = new List<ComponentModelValidationError>();
-
         public IReadOnlyCollection<ComponentModelValidationError> Errors { get { return _errors.AsReadOnly(); } }
 
+        private int _expressionCount;
         private T _model;
         public ModelValidation(T model)
         {
             _model = model;
+            _expressionCount = 0;
         }
 
         public ModelValidation<T> WhenFalse<W>(string Message, Func<W, bool> predicate, params Expression<Func<T, W>>[] property)
@@ -72,6 +73,7 @@ namespace FluentGuard
         {
             foreach (var exp in property)
             {
+                _expressionCount++;
                 var f = exp.Compile();
 
                 if (predicate(f))
@@ -85,6 +87,27 @@ namespace FluentGuard
         private string GetPropertyNameFromExpression<T>(Expression<T> exp)
         {
             return (((MemberExpression)exp.Body).Member as PropertyInfo).Name;
+        }
+
+        public void ThrowWhenAllConditionsAreMet()
+        {
+            if (_errors.Count == _expressionCount)
+            {
+                throw new ComponentModelValidationException(_errors);
+            }
+        }
+
+        public void ThrowWhenNoConditionsAreMet()
+        {
+            if (_errors.Count == 0)
+            {
+                throw new ComponentModelValidationException(_errors);
+            }
+        }
+
+        public void ThrowWhenOneOrMoreConditionsAreMet()
+        {
+            ThrowIfErrors();
         }
 
         public void ThrowIfErrors()

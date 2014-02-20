@@ -6,3 +6,6 @@ c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\Console
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\FluentGuard.dll
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\FluentGuard.pdb
 c:\users\bigol\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Projects\tmp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Projects\tmp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Projects\tmp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

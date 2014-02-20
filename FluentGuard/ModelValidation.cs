@@ -20,31 +20,31 @@ namespace FluentGuard
             _model = model;
         }
 
-        public ModelValidation<T> IsFalse<W>(string Message, Func<W, bool> predicate, params Expression<Func<T, W>>[] property)
+        public ModelValidation<T> WhenFalse<W>(string Message, Func<W, bool> predicate, params Expression<Func<T, W>>[] property)
+        {
+            RunExpression(Message, c => !predicate(c(_model)), property);
+            return this;
+        }
+
+        public ModelValidation<T> WhenTrue<W>(string Message, Func<W, bool> predicate, params Expression<Func<T, W>>[] property)
         {
             RunExpression(Message, c => predicate(c(_model)), property);
             return this;
         }
 
-        public ModelValidation<T> IsTrue<W>(string Message, Func<W, bool> predicate, params Expression<Func<T, W>>[] property)
-        {
-            RunExpression(Message, c => predicate(c(_model)), property);
-            return this;
-        }
-
-        public ModelValidation<T> Null(string Message, params Expression<Func<T, object>>[] property)
+        public ModelValidation<T> WhenNull(string Message, params Expression<Func<T, object>>[] property)
         {
             RunExpression(Message, (c) => c(_model) == null, property);
             return this;
         }
 
-        public ModelValidation<T> Null<W>(string Message, params Expression<Func<T, Nullable<W>>>[] property) where W : struct
+        public ModelValidation<T> WhenNull<W>(string Message, params Expression<Func<T, Nullable<W>>>[] property) where W : struct
         {
             RunExpression(Message, c => !c(_model).HasValue, property);
             return this;
         }
 
-        public ModelValidation<T> NullOrEmpty(string Message, params Expression<Func<T, string>>[] property)
+        public ModelValidation<T> WhenNullOrEmpty(string Message, params Expression<Func<T, string>>[] property)
         {
             RunExpression(Message, (c) => String.IsNullOrEmpty(c(_model)), property);
             return this;

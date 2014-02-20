@@ -13,7 +13,10 @@ namespace FluentGuard.Demo
         {
             try
             {
-                DoWork(new Person());
+                DoWork(new Person()
+                {
+                    Age = 19
+                });
             }
             catch (ComponentModelValidationException ex)
             {
@@ -29,9 +32,10 @@ namespace FluentGuard.Demo
         public static void DoWork(Person person)
         {
             ModelValidation<Person>.Validate(person)
-                .NullOrEmpty("{0} is required", c => c.FirstName, c => c.LastName)
-                .Null("{0} is required", c=>c.BirthDate)
-                .IsTrue("Must be 21 or older", c=> c < 21, c=>c.Age)
+                .WhenNullOrEmpty("{0} is required", c => c.FirstName, c => c.LastName)
+                .WhenNull("{0} is required", c => c.BirthDate)
+                .WhenTrue("Must be 21 or older", c => c < 21, c => c.Age)
+                .WhenFalse("Must be 21 or older", c => c >= 21, c => c.Age)
                 .ThrowIfErrors();
 
             Console.WriteLine("This person is cool");

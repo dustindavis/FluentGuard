@@ -1,5 +1,5 @@
 #Fluent Guard#
-x
+
 Fluent Guard is a validation framework with a fluent interface. It's meant to be quick and easy to validate multiple properties on a model with as little code as possible.
 
 ### Example Usage ###
@@ -15,4 +15,3 @@ Fluent Guard is a validation framework with a fluent interface. It's meant to be
             Console.WriteLine("This person is cool");
         } 
 
-Read more here: [http://tech.pro/blog/1651/fluent-model-validation](http://tech.pro/blog/1651/fluent-model-validation)

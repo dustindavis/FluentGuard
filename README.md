@@ -15,3 +15,4 @@ Fluent Guard is a validation framework with a fluent interface. It's meant to be
             Console.WriteLine("This person is cool");
         } 
 
+		Example from Visual Studio!
